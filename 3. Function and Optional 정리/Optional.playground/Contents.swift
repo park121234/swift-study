@@ -1,18 +1,18 @@
 import UIKit
 
 //optional
-var carName: String? //뒤에 물음표를 붙여서 값이 있을수도 있고 없을수도 있다고 표현 값없을경우 nil
-carName = nil
-carName = "제네시스"
+//var carName: String? //뒤에 물음표를 붙여서 값이 있을수도 있고 없을수도 있다고 표현 값없을경우 nil
+//carName = nil
+//carName = "제네시스"
 
 //var ActorName: String?
-
+//
 //let num = Int("10") ->  // 타입은 뭘까?
 //Int //타입이지만 문자열이 숫자면 인식됨
 //let num = Int("10") // 타입을 보면 Int? 이다.
-
-var favoriteMovieStar: String? = nil
-let num = Int("10")
+//
+//var favoriteMovieStar: String? = nil
+//let num = Int("10")
 
 // 고급 기능 4가지
 
@@ -24,11 +24,24 @@ let num = Int("10")
 //print (num!)  //! 사용시 옵셔널값은 나오지 않고 value값만 출력되게 할수 있다. (박스까기)
 
 //부드럽게 박스까기
-if let unwrappedCarName = carName {  //car name 있을경우 if 출력 없을경우 else 출력됨
-    print(unwrappedCarName)
-} else {
-    print("car name 없다.")
+//if let unwrappedCarName = carName {  //car name 있을경우 if 출력 없을경우 else 출력됨
+//    print(unwrappedCarName)
+//} else {
+//    print("car name 없다.")
+//}
+
+//2
+func printParsedInt(from: String)  {
+    guard let parsedInt = Int(from) else {
+        print("Int로 컨버팅 안됨")
+        return
+    }
+    print(parsedInt)
 }
+
+//var MyCarName: String? = nil
+//let carname = MyCarName ?? "테슬라"
+//print(carname)   //테슬라
 
 // --- 도전과제
 // 1. 최애 음식이름을 담는 변수를 작성하고 (String?) ,
@@ -36,22 +49,39 @@ if let unwrappedCarName = carName {  //car name 있을경우 if 출력 없을경
 // 3. 닉네임을 받아서 출력하는 함수 만들기, 조건 입력 파라미터는 String?
 
 // 1, 2
-let favoriteFood: String? = nil//"양고기"
+//let favoriteFood: String? = nil
+//
+//if let foodName = favoriteFood {
+//    print(foodName)
+//} else {
+//    print("좋아하는 음식 없음")
+//} //좋아하는음식 없음
 
-if let foodName = favoriteFood {
-    print(foodName)
-} else {
-    print("좋아하는 음식 없음")
-}
-
-// 3
-func printNickName(name: String?) {
-    guard let nickName = name else {
-        print("nickname 만들어 보자")
+func Myname(_ name: String?)  {
+    guard let name = myname else {
+        print("unkown")
         return
     }
-    
-    print(nickName)
+    print("my name is \(name)")
 }
+var myname: String? = "jason"
+Myname(myname)
+//my name is jason
 
-printNickName(name: "hihi")
+
+// 3
+//func printNickName(name: String?) {
+//    guard let nickName = name else {
+//        print("nickname 만들어 보자")
+//        return
+//    }
+//
+//    print(nickName)
+//}
+//
+//printNickName(name: nil)
+
+
+//var num: Int? = 1
+//
+//print(num!) //1
