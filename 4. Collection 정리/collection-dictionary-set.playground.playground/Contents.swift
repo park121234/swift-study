@@ -6,16 +6,16 @@ import UIKit
 //var scoreDic: [String: Int] = ["Jason": 80, "Jay": 95, "Jake": 90]
 //똑같은 코드
 //var scoreDic: Dictionary<String, Int> = ["Jason": 80, "Jay": 95, "Jake": 90]
-//
+
 //scoreDic["Jason"]
 //scoreDic["jay"]
-//
+
 //옵셔널 바인딩으로 안정적으로 가져오기
 //if let score = scoreDic["Jason"] {
 //    score
 //} else {
-//   //.. score 없음
-//}
+//    "...score 없음"
+}
 //
 //
 //scoreDic = [:]  //값 비우기
@@ -25,15 +25,10 @@ import UIKit
 //
 //기존 사용자 업데이트
 //scoreDic["Jason"] = 99
-//scoreDic
-//
 //사용자 추가
 //scoreDic["Jack"] = 100
-//scoreDic
-//
 //사용자 제거
 //scoreDic["Jack"] = nil
-//scoreDic
 //
 // For Loop 학생별 이름 점수 출력하기
 //for (name, score) in scoreDic {
