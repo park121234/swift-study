@@ -171,3 +171,5 @@ let lec3 = Lecture(name: "ios Pro", instructor: "jim", numOfStudent: 5)
 let lectures = [lec1, lec2, lec3]
 
 printLectureName(from: "jason", lectures: lectures)
+
+
